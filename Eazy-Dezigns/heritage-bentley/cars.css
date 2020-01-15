@@ -1,0 +1,142 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*** Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+	{margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
+	{display: block;
+	}
+body 
+	{line-height: 1;
+	}
+ol, ul 
+	{list-style: none;
+	}
+blockquote, q 
+	{quotes: none;
+	}
+blockquote:before, blockquote:after, q:before, q:after 
+	{content: '';
+	content: none;
+	}
+table 
+	{border-collapse: collapse;
+	border-spacing: 0;
+	}
+/* Containers */
+body
+	{background-color:#000000;
+	font-size:100%;
+	}
+#wrapper
+	{background-image:url(http://carrasquilla.faculty.asu.edu/GIT215/black-opacity-box.png);
+	background-repeat:repeat;
+	margin:30px;
+	width:1000px;
+	}
+#header
+	{background-color:#000000;
+	border-bottom:2px solid #FFFFFF;
+	padding:10px;
+	width:980px;
+	}
+#nav
+	{background-color:#222222;
+	width:1000px;
+	float:right;
+	}
+#nav ul
+	{list-style-type:none;
+	margin:0;
+	padding:0;
+	float:right;
+	}
+#nav li
+	{display: inline-block;
+	width:150px;
+	background-color:#6699CC;
+	text-align:center;
+	}
+#nav a
+	{color:#FFFFFF;
+	text-decoration:none;
+	}
+#nav a:hover
+	{color:#222222;
+	}
+#mainContent
+	{background-image:url(http://carrasquilla.faculty.asu.edu/GIT215/black-opacity.png);
+	background-repeat:repeat;
+	float:left;
+	margin-top:25px;
+	margin-left:25px;
+	padding:10px;
+	width:925px;
+	}
+img 
+	{float:right;
+	}
+#logo
+	{float:left;
+	}
+#footer
+	{background-color:#222222;
+	border-top:1px solid #FFFFFF;
+	clear:both;
+	padding:5px;
+	text-align:right;
+	width:990px;
+	}
+/*Font & Text*/
+h1, h2, p, li
+	{color:#FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height:1.5;
+	}
+h1
+	{font-size:20pt;
+	vertical-align:top;
+	}
+h2
+	{background-color:#222222;
+	color: #6699CC;
+	font-family: 'Italianno', cursive;
+	font-size:28pt;
+	}
+p
+	{font-size:11pt;
+	line-height:2em;
+	}
+blockquote
+	{font-size:14pt;
+	line-height:1.5em;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#ffffff;
+	padding:25px;
+	}
+#footer>p
+	{font-size:8pt;
+	}
+li
+	{font-size:11pt;
+	list-style:disc;
+	}
+.carModel
+	{list-style:none;
+	font-size:12pt;
+	}
+.section-heading, 
+.skip-button
+	{position: absolute;
+	text-indent: -9999px;
+	}

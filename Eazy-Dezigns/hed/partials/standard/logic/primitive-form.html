@@ -1,0 +1,35 @@
+<div class="modal-header">
+	<h2 class="text-center">{{parameter.label}}</h2>
+</div>
+<div class="modal-body">
+	<div style="margin-left: 180px;">
+		<label class="radio inline">
+			<input type="radio" ng-model="parameter.useLiteral" ng-value="true">Literal
+		</label>
+		<label class="radio inline">
+			<input type="radio" ng-model="parameter.useLiteral" ng-value="false">Expression
+		</label>
+	</div>
+	<hr>
+	<form class="form-horizontal" ng-show="parameter.useLiteral">
+		<div class="control-group" ng-repeat="element in parameter.elements" ng-include="'partials/standard/logic/primitive-widget.html'" ng-class="{error: element.errors.length > 0}"></div>
+		<div class="control-group error" ng-if="parameter.errors">
+			<label class="control-label" for="error">Error</label>
+			<div class="controls">
+				<p class="text-error" ng-repeat="error in parameter.errors">{{error.error}}</p>
+			</div>
+		</div>
+	</form>
+	<form class="form-horizontal" x-ng-show="!parameter.useLiteral">
+		<div class="control-group">
+			<label class="control-label" for="expression">Expression</label>
+			<div class="controls">
+				<select x-ng-model="parameter.selectedCannedExpression" x-ng-options="ce for ce in parameter.cannedExpressions"></select>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<a  href="" x-ng-click="save(detail)"><i class="icon-save icon-3x"></i> Save</a>
+	<a  href="" x-ng-click="cancel()"><i class="icon-remove-circle icon-3x"></i> Cancel</a>
+</div>

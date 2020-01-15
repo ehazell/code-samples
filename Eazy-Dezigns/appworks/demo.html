@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 
+<html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Test Run</title>
+ 
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/foundation.css" />
+  <link rel="stylesheet" type="text/css" href="css/grid-5.css" />
+  <link type="text/css" rel="stylesheet" href="css/semantic.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+  <script src="js/jquery.tablesorter.js"></script>
+  <script src="js/vendor/custom.modernizr.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+  <style type="text/css">
+ 	 
+    
+  </style>
+  
+  <script type="text/javascript">
+  function saveEdits() {
+  
+  //get the editable element
+  var editElem = document.getElementById("edit");
+  
+  //get the edited element content
+  var userVersion = editElem.innerHTML;
+  
+  //save the content to local storage
+  localStorage.userEdits = userVersion;
+  
+  //write a confirmation to the user
+  document.getElementById("update").innerHTML="Notations saved!";
+  
+  }
+  function checkEdits() {
+  
+  //find out if the user has previously saved edits
+  if(localStorage.userEdits!=null)
+  	document.getElementById("edit").innerHTML=localStorage.userEdits;
+  }
+  
+  
+  </script>
+
+</head>
+<body onload="checkEdits()">
+
+<div class="row">
+<section id="patient_profile">
+	<div class="small-12 medium-6 large-4 columns">
+		<div class="ui segment">
+			<h4 class="ui top attached inverted blue header">Patient Profile</h4> 
+			<div id="patient-profile" class="ui segment attached">
+				<img class="rounded ui small floated left image" src="images/elderly-woman.jpg">
+				
+				<table>
+					 <tbody>
+					    <tr>
+					      <td>Janet Doe, F, 74 years old</td>
+					      <td></td>
+					      </tr>
+					    <tr>
+					      <td><b>DoB:</b>4-Oct-1939</td>
+					      <td></td>
+					    </tr>
+					    <tr>
+					      <td><b>Admitted 5 days for:</b></td>
+					      <td></td>
+					    </tr>
+					    <tr><td>Heart failure</td>
+					    <td></td>
+					    </tr>
+					    <tr><td>Unit 10W, Room 1015</td>
+					    <td></td>
+					    </tr>
+					    <tr><td><b>Attending:</b>Dr. Lisa Smith</td>
+					    <td></td>
+					    </tr>
+				  </tbody>
+				</table>	
+			</div>
+		</div>
+	</div><!-- end columns div -->
+</section>
+
+
+<section id="vitals_i/o">
+	<div class="small-12 medium-6 large-4 columns">
+		<div class="ui segment">
+			<h4 class="ui top attached inverted blue header">
+			 <a href="#" class="widget">Vitals and I/O</a>
+			 <div class="mini ui floated right buttons">
+			 	<div class="ui blue button">12h</div>
+			 	<div class="ui blue button">24h</div>
+			 	<div class="ui blue button">All</div>
+			 </div>
+			 </h4>
+			 
+			 <div class="ui segment attached">
+			 	<div id="vitals-tabs">
+			 		<ul>
+			 		  <li><a href="#vitals-tabs-1">I/O</a></li>
+			 		  <li><a href="#vitals-tabs-2">HR</a></li>
+			 		  <li><a href="#vitals-tabs-3">BP</a></li>
+			 		  <li><a href="#vitals-tabs-4">Weight</a></li>
+			 		  <li><a href="#vitals-tabs-5">Temp</a></li>
+			 		</ul>
+			 		
+			 		<div id="vitals-tabs-1">
+				 		  <span data-tooltip class="has-tip tip-bottom" title="Click to view larger image."><img src="images/line-chart.png" data-reveal-id="ioModal" class="ui image"></span>
+				 		  <div id="ioModal" class="reveal-modal">
+				 		  	<img src="images/line-chart.png" class="ui image" height="100%" width="100%">
+				 		   	<a class="close-reveal-modal">&#215;</a>
+				 		  </div>
+			 		</div> <!-- end vitals-1 tab -->
+			 		
+			 		<div id="vitals-tabs-2">
+			 		  <span data-tooltip class="has-tip tip-bottom" title="Click to view larger image."><img src="images/line-chart.png" class="ui image" data-reveal-id="hrModal"></span>
+			 		  <div id="hrModal" class="reveal-modal">
+			 		     <img src="images/line-chart.png" class="ui image" height="100%" width="100%">
+			 		      <a class="close-reveal-modal">&#215;</a>
+			 		      </div>
+			 		</div><!-- end vitals-2 tab -->
+			 		
+			 		<div id="vitals-tabs-3">
+			 		   <span data-tooltip class="has-tip tip-bottom" title="Click to view larger image."><img src="images/line-chart.png" class="ui image" data-reveal-id="bpModal">
+			 		   <div id="bpModal" class="reveal-modal">
+			 		     <img src="images/line-chart.png" class="ui image" height="100%" width="100%">
+			 		      <a class="close-reveal-modal">&#215;</a>
+			 		      </div>
+			 		</div><!-- end vitals-3 tab -->
+			 		
+			 		<div id="vitals-tabs-4">
+			 		   <span data-tooltip class="has-tip tip-bottom" title="Click to view larger image."><img src="images/line-chart.png" class="ui image" data-reveal-id="wtModal">
+			 		   <div id="wtModal" class="reveal-modal">
+			 		     <img src="images/line-chart.png" class="ui image" height="100%" width="100%">
+			 		      <a class="close-reveal-modal">&#215;</a>
+			 		      </div>
+			 		</div><!-- end vitals-4 tab -->
+			 		
+			 		<div id="vitals-tabs-5">
+			 		   <span data-tooltip class="has-tip tip-bottom" title="Click to view larger image."><img src="images/line-chart.png" class="ui image" data-reveal-id="tempModal">
+			 		   <div id="tempModal" class="reveal-modal">
+			 		     <img src="images/line-chart.png" class="ui image" height="100%" width="100%">
+			 		      <a class="close-reveal-modal">&#215;</a>
+			 		      </div>
+			 		</div><!-- end vitals-5 tab --> 		  
+			 	</div>
+			 </div>
+		</div>
+	</div>
+</section>
+
+<section id="medications">
+	<div class="small-12 medium-6 large-4 columns">
+		<div class="ui segment">
+			<h4 class="ui top attached inverted blue header">
+			   <a href="#" class="widget">Current Medications</a>
+			   <div class="mini ui blue floated right icon button"><a href="#"><i class="filter icon"></i></a>
+			   </div>
+			   <div class="mini ui blue floated right labeled button"><a href="#"><i class="filter icon"></i>Filter</a>
+			   </div>
+			</h4>
+			<div class="ui segment attached">
+				<table class="ui celled table segment" data-reveal-id="medsTableModal">
+				  <thead>
+				    <tr>
+				    <th>Medication</th>
+				    <th>Started</th>
+				    <th>Actions</th>
+				  </tr></thead>
+				  <tbody>
+				    <tr>
+				      <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information." id="dialog-modal">Hydrochlorthiazide: 50mg od</span></a></td>
+				      <td>-5d</td>
+				      <td>
+				        <a href="#"><i class="black edit2 icon"></i></a>
+				        <a href="#"><i class="black info-circled icon"></i></a>
+				        <a href="#"><i class="black trash-can icon"></i></a>
+				      </td>
+				    </tr>
+				    <tr>
+				      <td><a href="#" ><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Levofloxacin: 500mg IV</span></a></td>
+				      <td>-1d</td>
+				       <td>
+				        <a href="#"><i class="black edit2 icon"></i></a>
+				        <a href="#"><i class="black info-circled icon"></i></a>
+				        <a href="#"><i class="black trash-can icon"></i></a>
+				      </td>
+				    </tr>
+				    <tr>
+				      <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Naproxen: 350mg bid</span></a></td>
+				      <td>-5d</td>
+				       <td>
+				        <a href="#"><i class="black edit2 icon"></i></a>
+				        <a href="#"><i class="black info-circled icon"></i></a>
+				        <a href="#"><i class="black trash-can icon"></i></a>
+				      </td>
+				    </tr>
+				  </tbody>
+				 </table>
+				<div id="medsTableModal" class="reveal-modal expand">
+					<a class="close-reveal-modal">&#215;</a>		
+					<iframe width="768px" height="480px" frameborder="0" src="medications.html"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</div><!-- ends row" -->
+
+<!-- jQuery for Foundation -->
+ <script type="text/javascript">
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation/foundation.reveal.js"></script>
+  <script>
+  $(document).foundation();
+  </script>
+<!-- end Foundation jQuery -->
+
+<script type="text/javascript">
+
+$(function(){
+	
+	$('#save').click(function() {
+		$('#view-edits').show();
+			$('#view-edits').html($('#edit').html());
+	});
+});
+</script>
+<script type="text/javascript">
+ $(function() {
+  $("#vitals-tabs, #notes-tabs").tabs();
+});
+</script>
+
+<script type="text/javascript">
+$( ".column" ).draggable();
+</script>
+
+ <script type="text/javascript">
+  $(function() {
+      $("#testTable").tablesorter({ headers: { 2: { sorter: false}, 3: {sorter: false}, 4: {sorter: false} }
+      });
+
+  });
+  
+</script>
+
+
+</body>
+</html>

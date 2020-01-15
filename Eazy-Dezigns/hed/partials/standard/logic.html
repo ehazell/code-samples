@@ -1,0 +1,36 @@
+<div class="row-fluid">
+	<div class="borderedBox span5" style="padding: 7px;">
+		<div class="search-prepend offset2">
+			Write a logic clause about:
+			<div class="icon-search icon-white" style="left: 182px;"></div>
+			<input type="text" class="search-query" placeholder="search" ng-model="templateFilter">
+		</div><br>
+		<p class="text-center">Select an option below (a new window will open)</p>
+		<ul class="nav nav-list borderedBox">
+			<li ng-repeat="primitive in primitives"><a href="" class="nav-header" ng-click="primitive.show = !primitive.show" ng-show="(primitive.templates | filter:templateFilter).length > 0"><i class="icon-folder-open-alt" ng-show="!primitive.show"></i><i class="icon-folder-close-alt" ng-show="primitive.show"></i>{{primitive.label}}</a>
+				<ul class="nav nav-list" ng-show="!primitive.show">
+					<li ng-repeat="template in primitive.templates | filter:templateFilter" ng-click="openClauseEditor(template)"><a href=""><i class="icon-file-text-alt"></i>{{template.name}}</a></li>
+				</ul>
+			</li>
+		</ul>
+		<p class="text-center"><b>All of the items on the grey area may be dragged in to the canvas on the right</b></p>
+		<p class="text-center"><i>Remember, you may drop anything in a container (including other containers), but nothing may go inside a clause.</i></p>
+		<xml id="toolbox" style="display: none">
+			<category name="Blocks">
+				<block type="logic_compare"></block>
+	            <block type="logic_exists"></block>
+	            <block type="logic_negate"></block>
+				<block type="logic_boolean"></block>
+			</category>
+		</xml>
+	</div>
+	<div class="borderedBox span7" id="blocklyDiv" style="height: 900px;"></div>
+</div>
+<div class="row-fluid">
+	<a href="#/standard/trigger" class="span1 text-center">
+		<i class="icon-caret-left icon-5x"></i><br>Return to previous step
+	</a>
+	<a href="#/standard/action" class="span1 offset10 text-center">
+		<i class="icon-caret-right icon-5x"></i><br>I'm done defining rule logic
+	</a>
+</div>

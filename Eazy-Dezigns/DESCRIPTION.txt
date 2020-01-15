@@ -1,0 +1,5 @@
+DESCRIPTION
+
+This is my own personal website that is a static website developed using HTML5 coding standards and the Bootstrap framework with CSS3 and jQuery.
+
+The URL of this website is www.eazydezigns.net

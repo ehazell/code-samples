@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 
+<html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Orders Information</title>
+ 
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/foundation.css" />
+  <link rel="stylesheet" href="css/grid-5.css" type="text/css" />
+  <link type="text/css" rel="stylesheet" href="css/semantic.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+  <script src="js/jquery.tablesorter.js"></script>
+  <script src="js/vendor/custom.modernizr.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  
+  <style>
+  
+  .ui.table {
+  	font-size: 1.1em;
+  }
+  
+  table thead {
+  	font-size: 1.2em;
+  	font-weight: bold; text-decoration: underline;
+  }
+    
+  .ui.segment.attached {
+  -moz-box-shadow: 0px 0px 0px 0px;
+  -webkit-box-shadow: 0px 0px 0px 0px;
+  box-shadow: 0px 0px 0px 0px;
+  }
+  </style>
+  
+  </head>
+  <body>
+  
+  <div class="medium-12 columns">
+    
+    <div class="ui segment attached">
+    <h1 class="modal-title">Current Orders</h1>
+      <table id="testTable" class="ui celled five column table" data-reveal-id="ordersTableModal">
+        <thead>
+          <tr>
+          <th>Order</th>
+          <th>Parameters</th>
+          <th>Written On</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td>CBC</td>
+            <td>everyday</td>
+            <td>-7d</td>
+            <td>ongoing</td>
+            <td>
+              <a href="#"><i class="black edit2 icon"></i></a>
+              <a href="#"><i class="black trash-can icon"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Low salt diet</td>
+            <td></td>
+            <td>-7d</td>
+            <td>ongoing</td>
+             <td><a href="#"><i class="black edit2 icon"></i></a>
+             <a href="#"><i class="black trash-can icon"></i></a></td>
+          </tr>
+          <tr>
+            <td>ID consult</td>
+            <td></td>
+            <td>-1d</td>
+            <td>scheduled</td>
+             <td><a href="#"><i class="black edit2 icon"></i></a>
+             </td>
+           </tr>
+           <tr>
+            <td>Sputum culture</td>
+            <td></td>
+            <td>-2d</td>
+            <td>results pending</td>
+             <td></td>
+           </tr>
+           
+        </tbody>
+       </table>    </div> 
+  </div><!-- end column div -->  
+  
+    
+  </body>
+  </html>

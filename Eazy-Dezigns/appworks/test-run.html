@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 
+<html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Test Run</title>
+ 
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/foundation.css" />
+  <link rel="stylesheet" type="text/css" href="css/grid-5.css" />
+  <link type="text/css" rel="stylesheet" href="css/semantic.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+  <script src="js/jquery.tablesorter.js"></script>
+  <script src="js/vendor/custom.modernizr.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+  <style type="text/css">
+ 	 
+    
+  </style>
+  
+  <script type="text/javascript">
+  function saveEdits() {
+  
+  //get the editable element
+  var editElem = document.getElementById("edit");
+  
+  //get the edited element content
+  var userVersion = editElem.innerHTML;
+  
+  //save the content to local storage
+  localStorage.userEdits = userVersion;
+  
+  //write a confirmation to the user
+  document.getElementById("update").innerHTML="Notations saved!";
+  
+  }
+  function checkEdits() {
+  
+  //find out if the user has previously saved edits
+  if(localStorage.userEdits!=null)
+  	document.getElementById("edit").innerHTML=localStorage.userEdits;
+  }
+  
+  
+  </script>
+
+</head>
+<body onload="checkEdits()">
+<div class="row">
+
+<!-- PATIENT PROFILE DIV -->
+<section id="patient_profile">
+  <div class="medium-6 small-12 columns">
+    <div class="ui segment">
+    <h4 class="ui top attached inverted blue header">
+      Patient Profile</h4> 
+    <div id="patient-profile" class="ui segment attached">
+      <img class="rounded ui small floated left image" src="images/elderly-woman.jpg">
+       <table>
+    	 <tbody>
+    	    <tr>
+    	      <td>Janet Doe, F, 74 years old</td>
+    	      <td></td>
+    	      </tr>
+    	    <tr>
+    	      <td><b>DoB:</b>4-Oct-1939</td>
+    	      <td></td>
+    	    </tr>
+    	    <tr>
+    	      <td><b>Admitted 5 days for:</b></td>
+    	      <td></td>
+    	    </tr>
+    	    <tr><td>Heart failure</td>
+    	    <td></td>
+    	    </tr>
+    	    <tr><td>Unit 10W, Room 1015</td>
+    	    <td></td>
+    	    </tr>
+    	    <tr><td><b>Attending:</b>Dr. Lisa Smith</td>
+    	    <td></td>
+    	    </tr>
+    	  </tbody>
+    	</table>	
+        
+    </div>
+    </div> 
+  </div><!-- end column div -->
+
+  </section>
+
+<!-- VITALS and I/O DIV -->
+<div class="column">
+    <div class="ui segment">
+     <h4 class="ui top attached inverted blue header">
+      <a href="#" class="widget">Vitals and I/O</a>
+      <div class="mini ui floated right buttons">
+        <div class="ui blue button">12h</div>
+        <div class="ui blue button">24h</div>
+        <div class="ui blue button">All</div>
+      </div>
+    </h4>
+    <div class="ui segment attached">
+      <div id="vitals-tabs">
+          <ul>
+            <li><a href="#vitals-tabs-1">I/O</a></li>
+            <li><a href="#vitals-tabs-2">HR</a></li>
+            <li><a href="#vitals-tabs-3">BP</a></li>
+            <li><a href="#vitals-tabs-4">Weight</a></li>
+            <li><a href="#vitals-tabs-5">Temp</a></li>
+          </ul>
+          <div id="vitals-tabs-1">
+            <span data-tooltip class="has-tip tip-bottom" title="Click to view larger image."><img src="images/line-chart.png" data-reveal-id="ioModal" class="ui image"></span>
+              <div id="ioModal" class="reveal-modal">
+               <img src="images/line-chart.png" class="ui image" height="100%" width="100%">
+                <a class="close-reveal-modal">&#215;</a>
+                </div>
+          </div>
+          <div id="vitals-tabs-2">
+            <span data-tooltip class="has-tip tip-bottom" title="Click to view larger image."><img src="images/line-chart.png" class="ui image" data-reveal-id="hrModal"></span>
+            <div id="hrModal" class="reveal-modal">
+               <img src="images/line-chart.png" class="ui image" height="100%" width="100%">
+                <a class="close-reveal-modal">&#215;</a>
+                </div>
+          </div>
+          <div id="vitals-tabs-3">
+             <span data-tooltip class="has-tip tip-bottom" title="Click to view larger image."><img src="images/line-chart.png" class="ui image" data-reveal-id="bpModal">
+             <div id="bpModal" class="reveal-modal">
+               <img src="images/line-chart.png" class="ui image" height="100%" width="100%">
+                <a class="close-reveal-modal">&#215;</a>
+                </div>
+          </div>
+          <div id="vitals-tabs-4">
+             <span data-tooltip class="has-tip tip-bottom" title="Click to view larger image."><img src="images/line-chart.png" class="ui image" data-reveal-id="wtModal">
+             <div id="wtModal" class="reveal-modal">
+               <img src="images/line-chart.png" class="ui image" height="100%" width="100%">
+                <a class="close-reveal-modal">&#215;</a>
+                </div>
+          </div>
+          <div id="vitals-tabs-5">
+             <span data-tooltip class="has-tip tip-bottom" title="Click to view larger image."><img src="images/line-chart.png" class="ui image" data-reveal-id="tempModal">
+             <div id="tempModal" class="reveal-modal">
+               <img src="images/line-chart.png" class="ui image" height="100%" width="100%">
+                <a class="close-reveal-modal">&#215;</a>
+                </div>
+          </div>
+        </div>
+       
+    </div>
+    </div> 
+  </div><!-- end column div -->
+
+  <!-- CURRENT MEDICATIONS DIV -->
+
+  <div class="column">
+    <div class="ui segment">
+     <h4 class="ui top attached inverted blue header">
+      <a href="#" class="widget">Current Medications</a>
+      <div class="mini ui blue floated right icon button"><a href="#"><i class="filter icon"></i></a>
+      </div>
+       <div class="mini ui blue floated right labeled button"><a href="#"><i class="filter icon"></i>Filter</a>
+       </div>
+    </h4>
+    <div class="ui segment attached">
+      <table class="ui celled table segment" data-reveal-id="medsTableModal">
+        <thead>
+          <tr>
+          <th>Medication</th>
+          <th>Started</th>
+          <th>Actions</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information." id="dialog-modal">Hydrochlorthiazide: 50mg od</span></a></td>
+            <td>-5d</td>
+            <td>
+              <a href="#"><i class="black edit2 icon"></i></a>
+              <a href="#"><i class="black info-circled icon"></i></a>
+              <a href="#"><i class="black trash-can icon"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#" ><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Levofloxacin: 500mg IV</span></a></td>
+            <td>-1d</td>
+             <td>
+              <a href="#"><i class="black edit2 icon"></i></a>
+              <a href="#"><i class="black info-circled icon"></i></a>
+              <a href="#"><i class="black trash-can icon"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Naproxen: 350mg bid</span></a></td>
+            <td>-5d</td>
+             <td>
+              <a href="#"><i class="black edit2 icon"></i></a>
+              <a href="#"><i class="black info-circled icon"></i></a>
+              <a href="#"><i class="black trash-can icon"></i></a>
+            </td>
+          </tr>
+        </tbody>
+       </table>
+       <div id="medsTableModal" class="reveal-modal expand">
+       		<a class="close-reveal-modal">&#215;</a>		
+			<iframe width="768px" height="480px" frameborder="0" src="medications.html"></iframe>
+		</div>
+           	
+       </div>
+    </div>
+    </div> 
+  </div></div><!-- end column div -->  
+	
+<!-- PROBLEMS DIV -->
+
+<div class="ui three column grid">
+  <div class="tablet computer only column">
+    <div class="ui segment">
+     <h4 class="ui top attached inverted blue header">
+      <a href="#" class="widget">Problems</a>
+       	<div class="mini ui floated right icon blue button"><a href="#"><i class="filter icon"></i></a></div>
+       	<div class="mini ui floated right icon blue button"><a href="#"><i class="add icon"></i></a></div>
+          <div class="mini ui floated right labeled blue button"><a href="#"><i class="filter icon"></i>Filter</a></div>
+          <div class="mini ui floated right labeled blue button"><a href="#"><i class="add icon"></i>New</a></div>
+        
+    </h4>
+    <div class="ui segment attached">
+      <table class="ui celled table segment" data-reveal-id="problemsTableModal">
+  <thead>
+    <tr>
+    <th>Problems</th>
+    <th>Since</th>
+    <th>Actions</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Heart failure</span></a></td>
+      <td>age 65</td>
+      <td>
+        <a href="#"><i class="black edit2 icon"></i></a>
+        <a href="#"><i class="black cancel-circled icon"></i></a>
+        <a href="#"><i class="black info-circled icon"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Arthritis</span></a></td>
+      <td>age 72</td>
+       <td>
+        <a href="#"><i class="black edit2 icon"></i></a>
+        <a href="#"><i class="black cancel-circled icon"></i></a>
+        <a href="#"><i class="black info-circled icon"></i></a>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Pneumonia</span></a></td>
+      <td>2 days ago</td>
+       <td>
+        <a href="#"><i class="black edit2 icon"></i></a>
+        <a href="#"><i class="black cancel-circled icon"></i></a>
+        <a href="#"><i class="black info-circled icon"></i></a>
+      </td>
+    </tr>
+  </tbody>
+ </table>
+ 
+ <div id="problemsTableModal" class="reveal-modal expand">
+ 		<a class="close-reveal-modal">&#215;</a>		
+ 		<iframe width="768px" height="480px" frameborder="0" src="problems.html"></iframe>
+ 	</div>
+    </div>
+    </div> 
+  </div><!-- end column div -->
+
+  <!-- VITALS DIV -->
+
+  <div class="column">
+    <div class="ui segment">
+     <h4 class="ui top attached inverted blue header">
+      <a href="#" class="widget">Vitals</a>
+      <div class="mini ui blue floated right icon button"><a href="#"><i class="filter icon"></i></a>
+      </div>
+       <div class="mini ui blue floated right labeled button"><a href="#"><i class="filter icon"></i>Filter</a>
+       </div>
+    </h4>
+    <div class="ui segment attached">
+       <table class="ui celled table segment" data-reveal-id="vitalsTableModal">
+          <tbody>
+            <tr>
+              <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Heart rate</span></a></td>
+              <td>72</td>
+              <td>
+                <a href="#"><i class="black edit2 icon"></i></a>
+                <a href="#"><i class="black paste icon"></i></a>
+                <a href="#"><i class="black chart-bar icon"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">BP</span></a></td>
+              <td>130/82</td>
+               <td>
+                <a href="#"><i class="black edit2 icon"></i></a>
+                <a href="#"><i class="black paste icon"></i></a>
+                <a href="#"><i class="black chart-bar icon"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Temp</span></a></td>
+              <td>102</td>
+               <td>
+                <a href="#"><i class="black edit2 icon"></i></a>
+                <a href="#"><i class="black paste icon"></i></a>
+                <a href="#"><i class="black chart-bar icon"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Resp</span></a></td>
+              <td>22/min</td>
+               <td>
+               <a href="#"><i class="black edit2 icon"></i></a>
+                <a href="#"><i class="black paste icon"></i></a>
+                <a href="#"><i class="black chart-bar icon"></i></a>
+              </td>
+            </tr>
+          <tr>
+              <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Weight</span></a></td>
+              <td>122 lbs</td>
+               <td>
+               <a href="#"><i class="black edit2 icon"></i></a>
+                <a href="#"><i class="black paste icon"></i></a>
+                <a href="#"><i class="black chart-bar icon"></i></a>
+              </td>
+            </tr>
+          </tbody>
+         </table>
+         <div id="vitalsTableModal" class="reveal-modal expand">
+         		<a class="close-reveal-modal">&#215;</a>		
+         		<iframe width="768px" height="480px" frameborder="0" src="vitals.html"></iframe>
+         	</div>
+    </div>
+    </div> 
+  </div><!-- end column div -->
+
+  <!-- CURRENT ORDERS DIV -->
+
+  <div class="column">
+    <div class="ui segment">
+     <h4 class="ui top attached inverted blue header">
+      <a href="#" class="widget">Current Orders</a>
+      <div class="mini ui blue floated right icon button"><a href="#"><i class="filter icon"></i></a>
+      </div>
+      <div class="mini ui blue floated right labeled button"><a href="#"><i class="filter icon"></i>Filter</a>
+       </div>
+    </h4>
+    <div class="ui segment attached">
+      <table id="testTable" class="ui celled table segment" data-reveal-id="ordersTableModal">
+        <thead>
+          <tr>
+          <th>Order</th>
+          <th>Parameters</th>
+          <th>Written On</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td>CBC</td>
+            <td>everyday</td>
+            <td>-7d</td>
+            <td>ongoing</td>
+            <td>
+              <a href="#"><i class="black edit2 icon"></i></a>
+              <a href="#"><i class="black trash-can icon"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td>Low salt diet</td>
+            <td></td>
+            <td>-7d</td>
+            <td>ongoing</td>
+             <td><a href="#"><i class="black edit2 icon"></i></a>
+             <a href="#"><i class="black trash-can icon"></i></a></td>
+          </tr>
+          <tr>
+            <td>ID consult</td>
+            <td></td>
+            <td>-1d</td>
+            <td>scheduled</td>
+             <td><a href="#"><i class="black edit2 icon"></i></a>
+             </td>
+           </tr>
+           <tr>
+            <td>Sputum culture</td>
+            <td></td>
+            <td>-2d</td>
+            <td>results pending</td>
+             <td></td>
+           </tr>
+           
+        </tbody>
+       </table>
+       <div id="ordersTableModal" class="reveal-modal expand">
+       		<a class="close-reveal-modal">&#215;</a>		
+       		<iframe width="768px" height="480px" frameborder="0" src="orders.html"></iframe>
+       	</div>
+    </div>
+    </div> 
+  </div></div><!-- end column div -->
+
+  <!-- NOTES DIV -->
+
+<div class="ui three column grid">
+  <div class="column">
+    <div class="ui segment">
+     <h4 class="ui top attached inverted blue header">
+      <a href="#" class="widget">Notes</a>
+      <div class="mini ui blue floated right icon button"><a href="#"><i class="add icon"></i></a>
+      </div>
+      <div class="mini ui blue floated right labeled button"><a href="#"><i class="add icon"></i>New</a>
+       </div>
+    </h4>
+        <div class="ui segment attached">
+             <div id="notes-tabs">
+                <ul>
+                  <li><a href="#notes-tabs-1">Yesterday</a></li>
+                  <li><a href="#notes-tabs-2">-2d</a></li>
+                  <li><a href="#notes-tabs-3">-3d</a></li>
+                  <li><a href="#notes-tabs-4">Cardio consult</a></li>
+                  <li><a href="#notes-tabs-5">Admission</a></li>
+                </ul>
+                <div id="notes-tabs-1">
+                  <ul class="notes">
+                    <li>Edema reducing</li>
+                    <li>Cough and fever</li>
+                    <li>Continue meds</li>
+                    <li>Request ID consult</li>
+                  </ul>
+                </div>
+                <div id="notes-tabs-2">
+                  
+                </div>
+                <div id="notes-tabs-3">
+                   
+                </div>
+                <div id="notes-tabs-4">
+                   
+                </div>
+                <div id="notes-tabs-5">
+                   
+                </div>
+              </div>
+           </div>
+    </div> 
+  </div><!-- end column div -->
+
+  <!-- SYMPTOMS and FINDINGS -->
+
+<div class="column">
+    <div class="ui segment">
+     <h4 class="ui top attached inverted blue header">
+      <a href="#" class="widget">Findings</a>
+      <div class="mini ui blue floated right icon button"><a href="#"><i class="filter icon"></i></a>
+      </div>
+      <div class="mini ui blue floated right labeled button"><a href="#"><i class="filter icon"></i>Filter</a>
+       </div>
+    </h4>
+    <div class="ui segment attached">
+       <table class="ui celled table segment" data-reveal-id="findingsTableModal">
+          <tbody>
+            <tr>
+              <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Cough</span></a></td>
+              <td>productive</td>
+              <td>
+                <a href="#"><i class="black edit2 icon"></i></a>
+                <a href="#"><i class="black paste icon"></i></a>
+                <a href="#"><i class="black chart-bar icon"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Dyspnea</span></a></td>
+              <td>at rest</td>
+               <td>
+                <a href="#"><i class="black edit2 icon"></i></a>
+                <a href="#"><i class="black paste icon"></i></a>
+                <a href="#"><i class="black chart-bar icon"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Palpitations</span></a></td>
+              <td></td>
+               <td>
+                <a href="#"><i class="black edit2 icon"></i></a>
+                <a href="#"><i class="black paste icon"></i></a>
+                <a href="#"><i class="black chart-bar icon"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Fatigue</span></a></td>
+              <td></td>
+               <td>
+               <a href="#"><i class="black edit2 icon"></i></a>
+                <a href="#"><i class="black paste icon"></i></a>
+                <a href="#"><i class="black chart-bar icon"></i></a>
+              </td>
+            </tr>
+          <tr>
+              <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Ankle edema</span></a></td>
+              <td>++</td>
+               <td>
+               <a href="#"><i class="black edit2 icon"></i></a>
+                <a href="#"><i class="black paste icon"></i></a>
+                <a href="#"><i class="black chart-bar icon"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Abdominal Distension</span></a></td>
+              <td></td>
+               <td>
+               <a href="#"><i class="black edit2 icon"></i></a>
+                <a href="#"><i class="black paste icon"></i></a>
+                <a href="#"><i class="black chart-bar icon"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td><a href="#"><span data-tooltip class="has-tip tip-bottom" title="Click here for more information.">Knee Pain</span></a></td>
+              <td></td>
+               <td>
+               <a href="#"><i class="black edit2 icon"></i></a>
+                <a href="#"><i class="black paste icon"></i></a>
+                <a href="#"><i class="black chart-bar icon"></i></a>
+              </td>
+            </tr>
+          </tbody>
+         </table>
+         <div id="findingsTableModal" class="reveal-modal expand">
+         		<a class="close-reveal-modal">&#215;</a>		
+         		<iframe width="768px" height="480px" frameborder="0" src="findings.html"></iframe>
+         	</div>
+    </div>
+    </div> 
+  </div><!-- end column div -->
+
+  <!-- PLAN DIV -->
+
+  <div class="column">
+    <div class="ui segment">
+      <h4 class="ui top attached inverted blue header">
+      <a href="#" class="widget">Plan</a>
+      <div class="mini ui blue floated right icon button"><a href="#"><i class="add icon"></i></a>
+      </div>
+      <div class="mini ui blue floated right labeled button"><a href="#"><i class="add icon"></i>New</a>
+       </div>
+    </h4>
+    <div class="ui segment attached">
+      <table id="testTable" class="ui celled table segment" data-reveal-id="planTableModal">
+        
+        <tbody>
+          <tr>
+            <td><input type="checkbox" checked=""></td>
+            <td><i class="icon-ok"></i></td>
+            <td>Cardiac doppler</td>
+            <td>
+              <a href="#"><i class="black edit2 icon"></i></a>
+              <a href="#"><i class="black info-circled icon"></i></a>
+              
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td><i class="icon-ok"></i><i class="icon-warning-sign"></i></td>
+            <td>Pneumococcal vaccine (PCV13)</td>
+            <td><a href="#"><i class="black edit2 icon"></i></a>
+            <a href="#"><i class="black info-circled icon"></i></a></td>
+             
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td>Ambulate</td>
+            <td><a href="#"><i class="black edit2 icon"></i></a>
+            </td>
+             
+           </tr>
+           <tr>
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td>Rheumatology consult</td>
+            <td></td>
+             
+           </tr>
+         </tbody>
+       </table>
+       <div id="planTableModal" class="reveal-modal expand">
+       		<a class="close-reveal-modal">&#215;</a>		
+       		<iframe width="768px" height="480px" frameborder="0" src="plan.html"></iframe>
+       	</div>
+    </div>
+    </div> 
+  </div></div><!-- end column div --> 
+
+  <!-- CURRENT NOTES DIV --> 
+
+ <div class="ui three column grid">
+  <div class="column">
+    <div class="ui segment">
+	    <h4 class="ui top attached inverted blue header">
+	      <a href="#" class="widget">Current Notes</a>
+	    </h4>
+	    <div id="view-edits" class="ui segment attached" data-reveal-id="currentNotesModal">
+	     Click to edit content		     	   
+	    </div>
+	    <div id="currentNotesModal" class="reveal-modal">
+	    	<h1 class="modalHeader">Click Content to Edit Notes</h1>
+	    	<div id="edit" contenteditable="true">
+	    		Here is the editable content
+	    	</div>
+	    	<div id="update"></div>
+	    	<div id="save" class="small ui positive button" onclick="saveEdits()">Save Notes</div>
+	    	<a class="close-reveal-modal"><i class="circular inverted red cancel icon"></i></a>
+	    	
+	    
+	    </div>
+    </div> 
+  </div><!-- end column div -->
+
+  <!-- TESTS DIV -->
+
+  <div class="column">
+    <div class="ui segment">
+       <h4 class="ui top attached inverted blue header">
+      <a href="#" class="widget">Tests</a>
+      <div class="mini ui blue floated right icon button"><a href="#"><i class="filter icon"></i></a>
+      </div>
+      <div class="mini ui blue floated right labeled button"><a href="#"><i class="filter icon"></i>Filter</a>
+       </div>
+    </h4>
+    <div class="ui segment attached">
+      <table id="testTable" class="ui celled table segment" data-reveal-id="testsTableModal">
+        <thead>
+          <tr>
+          <th>Test</th>
+          <th>Time</th>
+          <th>Result</th>
+          <th>Change</th>
+          <th>Actions</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td>CBC</td>
+            <td></td>
+            <td></td>
+            <td>(-2d)</td>
+            <td>
+              <a href="#"><i class="black edit2 icon"></i></a>
+              <a href="#"><i class="black info-circled icon"></i></a>
+              <a href="#"><i class="black basket-alt icon"></i></a>
+              <a href="#"><i class="black chart-bar icon"></i></a>
+            </td>
+          </tr>
+          <tr>
+            <td>- WBC</td>
+            <td>yesterday</td>
+            <td>7200</td>
+            <td>+200</td>
+             <td></td>
+          </tr>
+          <tr>
+            <td>- RBC</td>
+            <td>12:30 pm</td>
+            <td>4.8m</td>
+            <td>+0.01m</td>
+             <td></td>
+           </tr>
+           <tr>
+            <td>- Platelet</td>
+            <td></td>
+            <td>200000</td>
+            <td>unch</td>
+             <td></td>
+           </tr>
+           <tr>
+            <td>EKG</td>
+            <td>8 am</td>
+            <td><a href="#">View</a></td>
+            <td>-3d <a href="#">View</a></td>
+            <td>
+              <a href="#"><i class="black edit2 icon"></i></a>
+              <a href="#"><i class="black info-circled icon"></i></a>
+              <a href="#"><i class="black basket-alt icon"></i></a>
+              <a href="#"><i class="black chart-bar icon"></i></a>
+            </td>
+           </tr>
+           <tr>
+            <td>Chest X-ray</td>
+            <td>12:30 pm</td>
+            <td><a href="#">View</a></td>
+            <td>-4d <a href="#">View</a></td>
+            <td>
+              <a href="#"><i class="black edit2 icon"></i></a>
+              <a href="#"><i class="black info-circled icon"></i></a>
+              <a href="#"><i class="black basket-alt icon"></i></a>
+              <a href="#"><i class="black chart-bar icon"></i></a>
+            </td>
+           </tr>
+        </tbody>
+       </table>
+       <div id="testsTableModal" class="reveal-modal expand">
+       		<a class="close-reveal-modal">&#215;</a>		
+       		<iframe width="640px" height="480px" frameborder="0" src="tests.html"></iframe>
+       	</div>
+    </div>
+    </div></div><!-- end column div -->
+
+ <!-- Sample COLUMN -->
+
+ <div class="column">
+    <div class="ui segment">
+      <h4 class="ui top attached inverted blue header">
+      <a href="#" class="widget">Demo Widget</a>
+    </h4>
+    <div class="ui segment attached">
+      		    		  
+      </div>
+          </div>
+          </div><!-- end column div -->
+
+</div><!-- end grid div -->
+
+      
+
+<!-- jQuery for Foundation -->
+ <script type="text/javascript">
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation/foundation.reveal.js"></script>
+  <script>
+  $(document).foundation();
+  </script>
+<!-- end Foundation jQuery -->
+
+<script type="text/javascript">
+
+$(function(){
+	
+	$('#save').click(function() {
+		$('#view-edits').show();
+			$('#view-edits').html($('#edit').html());
+	});
+});
+</script>
+<script type="text/javascript">
+ $(function() {
+  $("#vitals-tabs, #notes-tabs").tabs();
+});
+</script>
+
+<script type="text/javascript">
+$( ".column" ).draggable();
+</script>
+
+ <script type="text/javascript">
+  $(function() {
+      $("#testTable").tablesorter({ headers: { 2: { sorter: false}, 3: {sorter: false}, 4: {sorter: false} }
+      });
+
+  });
+  
+</script>
+
+
+</body>
+</html>

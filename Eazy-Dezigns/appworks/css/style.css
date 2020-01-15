@@ -1,0 +1,167 @@
+/* Styles */
+
+html,body { font-size:0.87em; }
+body { font-family: Tahoma, Verdana, Arial, sans-serif; line-height: 1.25; }
+a { text-decoration: none;}
+a:focus { outline: none; }
+header{
+	height: 100px;
+	width: 100%;
+	background-color: rgb(56, 149,198);
+	color: white;
+	text-align: center;
+	text-shadow: 0 0 5px #1b1b1b;
+	-moz-box-shadow: 0 3px 5px #282828;
+	box-shadow: 0 3px 5px #282828;
+	margin-bottom: 20px;
+}
+header h1 {
+	font-size: 4em;
+	padding-top: 17px;
+}
+footer{
+	height: 60px;
+	width: 100%;
+	color: #555;
+	text-align: center;
+	margin-top: 30px;
+}
+footer h4{
+	padding-top: 30px;
+}
+i.icon a { text-decoration: none; }
+.ui.items .item:nth-of-type(n+1):hover { border-bottom-color: #6ECFF5 !important; }
+.ui.items .item:nth-of-type(n+2):hover { border-bottom-color: #6ECFF5 !important; }
+.ui.items .item:nth-of-type(n+3):hover { border-bottom-color: #6ECFF5 !important; }
+.ui.items .item:nth-of-type(n+4):hover { border-bottom-color: #6ECFF5 !important; }
+.ui.items .item:nth-of-type(n+5):hover { border-bottom-color: #6ECFF5 !important; }
+.ui.items .item:nth-of-type(n+6):hover { border-bottom-color: #6ECFF5 !important; }
+.ui.buttons.mini .button, .ui.mini.button { font-size: 0.625rem; padding: 0.6em 0.8em; }
+.ui.button a { color: white; }
+.ui.blue.button:hover { background-color: rgb(56, 149,198); }
+.ui.blue.button {background-color: rgb(65, 172, 229); }
+.ui.table { font-size: 0.8em; }
+.ui.table th { font-weight: bolder; }
+.ui.table tr td a { color: rgb(56,149,198); }
+.has-tip { border-bottom: 1px dotted #6dcef4; }
+.has-tip:hover, .has-tip:focus { text-decoration: underline; border-bottom: 0px none; cursor: pointer; }
+.widget {color: white; }
+.widget:hover { color: rgb(56,149,198); text-decoration: underline; }
+.ui.small.menu .item { font-size: 0.65rem; }
+.ui-tabs .ui-tabs-panel { padding: 0; }
+.ui-widget-header { background: rgb(110, 207, 245); border: 1px solid rgb(65, 172, 229); }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { background: rgb(255, 255, 255); }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: rgb(65, 172, 229); }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid rgb(56, 149, 198); }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover { border: 1px solid rgb(56, 149, 198); background-color: rgb(255,255,255); }
+.ui-state-hover a, .ui-widget-content .ui-state-hover a, .ui-widget-header .ui-state-hover a {color: rgb(56, 149, 198); }
+.ui.rounded.image { border-radius: 10em; }
+.ui-widget {font-size: 0.875em; }
+.ui-widget-content { border: 1px solid rgb(43, 166, 203); background: rgb(255, 255, 255); }
+.notes li { list-style-type: none; display: block; }
+#vitals-tabs { font-size: 0.75em; }
+#notes-tabs { font-size: 0.70em; }
+#patient-profile { font-size: 1em;}
+#save { float: right; margin-top: 20px; }
+#update { text-align: center; font-size: 2em; color: green; margin-top: 20px; }
+.modalHeader { text-align: center; text-decoration: underline; color:rgb(56, 149, 198); }
+.problems { clear: none; }
+.current-notes { clear: none; }   
+
+/* tables */
+table.patient-info {
+	float: left;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+table.tablesorter {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+
+.modal-title {
+	text-align: center; color: #6DCEF4; text-decoration: underline;
+}
+
+.ui.icon.buttons .button,
+.ui.icon.button  {
+	display: none;
+	visibility: hidden;
+}
+
+@media only screen and (min-width:1023px) {
+	.problems {
+		clear: left;
+	}
+	.current-notes {
+		clear: left;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 998px) {
+	
+.ui.buttons.mini .button, .ui.mini.button { display: none; }	
+body, html {font-size: 11px; }
+.ui.icon.buttons .button,.ui.icon.button {
+	display: inline;
+	visibility: visible;
+	}
+
+}
+
+@media only screen and (max-width:767px){
+	header h1 {
+		font-size: 2.75em;
+		padding-top: 30px;
+	}
+	
+	table.patient-info {
+		margin: 0;
+	}
+	
+}
+
+@media only screen and (max-width:639px) {
+	table.patient-info {
+		margin-left: 100px;
+		float: left;
+	}
+	
+	#patient-profile {
+		font-size: 1.25em;
+	}
+}

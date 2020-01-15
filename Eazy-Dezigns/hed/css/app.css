@@ -1,0 +1,168 @@
+body {
+	padding: 7px;
+}
+
+header {
+	display: -webkit-flex;
+	-webkit-align-items: center;
+	padding: 0 20px;
+	background-color: #FFDA5C;
+}
+
+.mainMenu {
+	-webkit-flex: 1;
+	text-align: center;
+}
+
+div.mainMenu ul {
+	display: inline-block;
+	margin-bottom: 0;
+}
+
+header div {
+	text-align: right;
+}
+
+ng-view {
+	position: absolute;
+	top: 115px;
+	bottom: 7px;
+	left: 7px;
+	right: 7px;
+}
+
+.homeBox {
+	display: -webkit-flex;
+	-webkit-align-items: center;
+	width: 330px;
+	/*height: 170px;*/
+	margin: 0 auto;
+}
+
+.homeBox * {
+	padding: 10px
+}
+
+.homeBox div {
+	-webkit-flex: 1;
+}
+
+.homeBox div p {
+	text-align: left;
+}
+
+.borderedBox {
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+}
+
+.flexibleBox {
+	display: -webkit-flex;
+}
+
+.search-prepend {
+	position: relative;
+}
+
+.search-prepend .search-query {
+	padding-left: 29px;
+}
+
+.search-prepend .icon-search {
+	position: absolute;
+	top: 7px;
+	left: 11px;
+}
+
+.gridStyle {
+	height: 100px;
+}
+
+.radio {
+	vertical-align: top;
+}
+
+
+li.tiny a {
+	font-size: 0.9em;
+	font-weight: 100;
+	color: black;
+}
+
+li.small a {
+	font-size: 1.1em;
+	font-weight: 300;
+	color: black;
+}
+
+li.medium a {
+	font-size: 1.5em;
+	font-weight: 500;
+	color: black;
+}
+
+li.big a {
+	font-size: 1.9em;
+	font-weight: 700;
+	color: red;
+}
+
+li.huge a {
+	font-size: 2.4em;
+	font-weight: 900;
+	color: black;
+}
+
+.labeled-border {
+	margin-top: -12px;
+	margin-left: 10px;
+	background: white;
+	width: auto;
+	display: table;
+}
+
+.modal {
+	width: auto;
+}
+
+.modal-body {
+	max-height: none;
+}
+
+.icon-3x {
+	vertical-align: middle;
+}
+
+.modal-body{
+	overflow:visible;
+}
+
+text {
+  font-size: 11px;
+  cursor: pointer;
+}
+
+text.parent {
+  fill: #1f77b4;
+}
+
+circle {
+  fill: #ccc;
+  stroke: #999;
+  pointer-events: all;
+}
+
+circle.parent {
+  fill: #1f77b4;
+  fill-opacity: .1;
+  stroke: steelblue;
+}
+
+circle.parent:hover {
+  stroke: #ff7f0e;
+  stroke-width: .5px;
+}
+
+circle.child {
+  pointer-events: none;
+}
