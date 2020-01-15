@@ -1,0 +1,164 @@
+/* CSS Styling for the Colorado River Conditions Dashboard */
+
+#block-views-cr-interactive-dashboard-block, #block-views-60a91bc22d3e198ee27b6b6f51fe6877,
+#block-views-ff51f3a40f4846bb05513c1f2ec0935d, #block-views-d898aa4c8afdfbaf396deb18328960a9,
+#block-views-de1b6411c66ad9583e00b2347dd6513a, #block-views-e1b73a81d733ac716261e0b823dc10b1,
+#block-views-df5c4b998324e83d8660399f495e61e7, #block-views-211658b0832c6e96ec645f3128841e66,
+#block-views-f01ba1603c6c17dd46c84c08aea86390, #block-nodeblock-1056--2, #block-nodeblock-1058--2,
+#block-nodeblock-1396--2, #block-nodeblock-1051--2, #block-nodeblock-1052--2, #block-nodeblock-1053--2,
+#block-nodeblock-1054--2, #block-nodeblock-1055--2, #block-nodeblock-1397--2, #block-nodeblock-1518,
+#block-quicktabs-sample-tabs, #block-nodeblock-1633--2 {
+  display: none;
+}
+
+#block-nodeblock-1056--2, #block-nodeblock-1058--2, #block-nodeblock-1396--2,
+#block-nodeblock-1051--2, #block-nodeblock-1052--2, #block-nodeblock-1053--2,
+#block-nodeblock-1054--2, #block-nodeblock-1055--2, #block-nodeblock-1397--2,
+#block-quicktabs-sample-tabs, #block-nodeblock-1633--2 {
+  /*bottom: 97px;*/
+  max-width: 80%;
+/*  left: 150px;*/
+  border: 2px solid #1b2e5b;
+  border-radius: 6px;
+  padding: 10px;
+  background: #fff;
+  /* transition: all .25s ease-out; */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-top: -20%;
+  margin-left: -40%;
+}
+
+area {
+  display: block;
+}
+
+area#drought-monitor {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+
+area#snow-fall {
+  position: absolute;
+  top: 30%;
+  right: 29%;
+}
+
+area#fontenelle {
+  position: absolute;
+  top: 22%;
+  right: 29%;
+}
+
+area#flaming-gorge {
+  position: absolute;
+  top: 26%;
+  right: 31%;
+}
+
+area#blue-mesa {
+  position: absolute;
+  top: 33%;
+  right: 13%;
+}
+
+area#morrow-point {
+  position: absolute;
+  top: 33%;
+  right: 22%;
+}
+
+area#navajo {
+  position: absolute;
+  top: 35%;
+  right: 29%;
+}
+
+area#lake-powell {
+  position: absolute;
+  top: 33%;
+  left: 57%;
+}
+
+area#lake-mead {
+  position: absolute;
+  top: 36%;
+  left: 39%;
+}
+
+.node-crm-interactive-dashboard h2, .node-crm-interactive-dashboard h2 a {
+  font-size: 22px !important;
+  color: #600 !important;
+}
+
+.close {
+  color: #aa0000;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  opacity: 1;
+}
+
+body.node-type-crm-interactive-dashboard .group-right .close {
+  display: none;
+}
+
+body.node-type-crm-interactive-dashboard .node-crm-interactive-dashboard {
+  font-size: 17px;
+}
+
+#block-block-151 #block-views-cr-dashboard-block-8, #block-block-151 #block-views-cr-dashboard-block-7, #block-block-151 #block-views-cr-dashboard-block-6,
+#block-block-151 #block-views-cr-dashboard-block-5, #block-block-151 #block-views-cr-dashboard-block-4, #block-block-151 #block-views-cr-dashboard-block-3,
+#block-block-151 #block-views-cr-dashboard-block-2, #block-block-151 #block-views-cr-dashboard-block-1 {
+  margin: 0 4px;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  border: 3px solid #447AB7;
+  background-color: #447ab7;
+}
+
+#block-block-93 .view-cr-dashboard {
+/*  width: 24%;
+  display: inline-block;*/
+  margin: 0 4px;
+  background-color: #447ab7;
+  border: 3px solid #447ab7;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: 18px;
+}
+
+#block-block-115 .view-cr-dashboard {
+  font-size: 15px;
+  margin: 0 4px;
+  background-color: #447ab7;
+  border: 3px solid #447ab7;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+#block-block-93 .view-cr-dashboard .views-field-field-cr-az-drought a img,
+#block-block-93 .view-cr-dashboard .views-field-field-cr-us-drought-1 a img {
+  height: 210px !important;
+  width: 100%;
+}
+
+.view-cr-dashboard .views-field-nothing a {
+  color: #fff !important;
+}
+
+.view-cr-dashboard .views-field-nothing a:hover {
+  text-decoration: underline;
+}
+
+.view-crm-dashboard-print .views-field p {
+  margin-top: 0 !important;
+}
