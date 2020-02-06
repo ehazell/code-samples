@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Self-Certification of Exemption Form</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+ <div class="panel-main clearfix">
+<div class="inner">
+<div class="row">
+<div class="col-md-6 col-md-push-3 sidebar panel-col-last panel-inner">
+<div>
+<!-- <h2 class="pane-title" style="display:none;"></h2> -->
+<div class="pane-content">
+<!-- multistep form -->
+<div class="cap-box-top">
+<h1 class="pane-title">Self-Certification of Exemption Form</h1> 
+</div><!-- //cap-box-top -->
+
+<div class="denial-content">
+    <h4>Not Eligible</h4>
+    <p>You do not qualify to use a previously issued certificate. Please apply for a new certificate.</p>
+    <p>If you have any questions, please contact the Assured and Adequate Water Supply Program at (602) 771-8599</p>
+ </div>
+    
+<div class="cap-box-bottom">
+<!-- progressbar -->
+<form id="multi-step-form" class="multi-step-form" method="post" action="mailto:ehazell@azwater.gov" enctype="text/plain">
+<ul id="progressbar" class="progressbar">
+<li class="active"><span>1</span></li>
+<li><span>2</span></li>
+<li><span>3</span></li>
+<li><span>4</span></li>
+<li><span>5</span></li>
+<li><span>6</span></li>
+</ul>
+<!-- fieldsets -->
+
+<div class="error">Please answer the question!</div>
+
+<fieldset>
+<h5 class="field-title">Is the plat in question a qualified platting authority?</h5>
+<p class="text-center"><a href="https://new.azwater.gov/sites/default/files/media/Qualified_Platting_Authorities_90282018_2.pdf" target="_blank">PDF list of qualified platting authorities</a></p>
+<div class="">
+<div class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios1" value="Yes">
+<label>
+Yes
+</label>
+</div>
+<div class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios2" value="No" class="denied">
+<label>
+No
+</label>
+</div>
+</div>
+
+<div class="text-center">
+<button class="btn btn-primary btn-lg next col-xs-6 col-xs-push-3 action-button" type="button" name="next">Next</button>
+</div>
+</fieldset>
+
+
+<fieldset>
+<h5 class="field-title"> Is the certificate number currently valid?</h5>
+<p class="text-center"><a href="https://infoshare.azwater.gov/docushare/dsweb/HomePage" target="_blank">Please search the certificate number in our imaged records database to confirm</a></p>
+<div class="">
+<div class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+<label>
+Yes
+</label>
+</div>
+<div class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios4" value="option4" class="denied">
+<label>
+No
+</label>
+</div>
+</div>
+<div class="text-center">
+<button class="btn btn-primary btn-lg next col-xs-6 col-xs-push-3 action-button" type="button" name="next">Next</button>
+</div>
+</fieldset>
+
+
+<fieldset>
+<h5 class="field-title"> Did the ADWR Director issue a 'Type A' certificate to the previous land owner?</h5>
+<p class="text-center">See<a rel="popover" data-img="https://new.azwater.gov/sites/default/files/Type-A-certificate.PNG"> examples of "Type A" certificates</a></p>
+<div class="">
+<div class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+<label>
+Yes
+</label>
+</div>
+<div class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios6" value="option6" class="denied">
+<label>
+No
+</label>
+</div>
+</div>
+<div class="text-center">
+<button class="btn btn-primary btn-lg next col-xs-6 col-xs-push-3 action-button" type="button" name="next">Next</button>
+</div>
+</fieldset>
+
+
+<fieldset>
+<h5 class="field-title"> Has the certificate been revoked, or is it currently involved in revocation proceedings?</h5>
+<p class="text-center">Please refer to our <a href="https://new.azwater.gov/aaws/public-noticing-reports" target="_blank">notices of certificate revocation</a></p>
+<div class="">
+<div class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios7" value="option7" class="denied">
+<label>
+Yes
+</label>
+</div>
+<div class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios8" value="option8">
+<label>
+No
+</label>
+</div>
+</div>
+<div class="text-center">
+<button class="btn btn-primary btn-lg next col-xs-6 col-xs-push-3 action-button" type="button" name="next">Next</button>
+</div>
+</fieldset>
+
+
+<fieldset>
+<h5 class="field-title"> Does the subdivided land qualify as a member land of CAGRD?</h5>
+<p class="text-center">Please visit the <a href="https://www.cagrd.com/enrollment/member-land-search" target="_blank">CAGRD website</a> to use the member land search.</p>
+<div class="">
+<div class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios9" value="option9" class="denied">
+<label>
+Yes
+</label>
+</div>
+<div class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios10" value="option10">
+<label>
+No
+</label>
+</div>
+</div>
+<div class="text-center">
+<button class="btn btn-primary btn-lg next col-xs-6 col-xs-push-3 action-button" type="button" name="next">Next</button>
+</div>
+</fieldset>
+
+
+<fieldset>
+<h5 class="field-title"> Has the plat submitted in the application changed?</h5>
+<div class="">
+<div class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios11" value="option11" class="denied">
+<label>
+Yes
+</label>
+</div>
+<div class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios12" value="option12">
+<label>
+No
+</label>
+</div>
+</div>
+<div class="text-center">
+<button class="btn btn-primary btn-lg next col-xs-6 col-xs-push-3 action-button" type="button" name="next">Next</button>
+</div>
+</fieldset>
+
+
+<fieldset>
+
+<div class="form-group">
+<h4><span>After reviewing the above criteria </span><input type="text" class="form-control" name="Platting Authority" placeholder="Platting Authority"><span> certify that </span> <input type="text" class="form-control" name="Applicant" placeholder="Applicant Name"><span> is eligible to use certificate #</span><input type="text" class="form-control" name="Certificate Number" placeholder="Certificate #"><span>.</span></h4>
+</div>
+
+<div class="text-center">
+<button class="btn btn-primary btn-lg submit col-xs-6 col-xs-push-3 action-button" type="submit" name="submit">Submit</button>
+</div>
+</fieldset>
+
+</form>
+ 
+<div class="thank-you">
+<h4>Eligible</h4>
+<p>You qualify to use a previously issued certificate</p>
+<p>If you have any questions, please contact the Assured and Adequate Water Supply Program at (602) 771-8599</p>
+</div>
+</div><!-- //cap-box-bottom -->
+</div><!-- //pane-content -->
+</div><!-- //panel-pane pane-sunrun-leadform -->
+</div><!-- //col-md-4 col-md-push-1 sidebar panel-col-last panel-inner -->
+</div><!-- //row -->
+</div><!-- //inner -->
+</div><!-- //panel-main clearfix -->
+  
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src="js/index.js"></script>
+
+
+</body>
+</html>
