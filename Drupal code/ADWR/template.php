@@ -278,12 +278,3 @@ function adwr_preprocess_region(&$vars) {
   }
 }
 
-/**
- * Implements hook_preprocess().
- */
-//function adwr_preprocess_page(&$variables) {
-//  if ($variables['nid'] == '1648') {
-//    drupal_add_js(drupal_get_path('theme', 'adwr') .'/js/timeline.js', 'file');
-//  }
-//}
-
